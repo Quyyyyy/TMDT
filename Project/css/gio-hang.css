@@ -1,0 +1,129 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+section{
+    max-width: 1205px;
+    margin: 0 auto;
+    padding-top: 128px;
+    padding-bottom: 310px;
+}
+tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+table{
+    text-indent: initial;
+    border-spacing: 2px;
+}
+.listSanPham{
+    border-collapse: collapse;
+    position: relative;
+}
+.listSanPham tr td:first-child{
+    text-align: center;
+}
+.listSanPham th{
+    border: 1px solid #ddd;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background:-webkit-linear-gradient(top, #202c4f, #5e698b);
+    color: #ddd;
+}
+.listSanPham td{
+    border: 1px solid #ddd;
+}
+.noPadding{
+    padding: 0 0 0 10px;
+    line-height: 2.5rem;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+.listSanPham td a{
+    display: block;
+    position: relative;
+    padding: 5px 0;
+}
+.alignRight{
+    text-align: center;
+    padding-right: 30px;
+}
+.soluong{
+    text-align: center;
+}
+.noPadding1{
+    text-align: center;
+}
+.listSanPham .soluong button{
+    width: 30px;
+    height: 2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+}
+.listSanPham .soluong button:hover{
+    background: #4caf50;
+}
+.listSanPham .soluong input{
+    width: 70px;
+    height: 30px;
+    border: none;
+    font-size: 15px;
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+}
+.fa{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.delete{
+    margin-top: 20px;
+    width: 100%;
+    gap: 20px;
+    /* text-align: right; */
+    display: flex;
+    justify-content: end;
+}
+
+.deleteall{
+    min-width: 70px;
+    display: block;
+    overflow: hidden;
+    padding: 7px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: normal;
+    color: #fff;
+    text-align: right;
+    background:-webkit-linear-gradient(top, #202c4f, #5e698b);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+.deleteall:hover{
+    background: -webkit-linear-gradient(top, #ea2424, #871010);
+}
+.thanhtien{
+    font-size: 15px;
+}
+.gia{
+    margin-top: 16px;
+    font-size: 15px;
+    /* font-weight: 300; */
+    color: red;
+}
+.thanhtien span{
+    display: inline-block;
+}

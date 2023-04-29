@@ -1,0 +1,55 @@
+*{
+    padding:0;
+    margin: 0;
+    font-family: "Roboto",sans-serif;
+    background-color: rgb(223, 219, 219);
+}
+header{
+    width: 70vw;
+    height: 40px;
+    background: hsl(0, 30%, 96%);
+}
+li{
+    display: inline-block;
+    
+}
+li a{
+    color: rgb(20, 15, 15);
+    text-decoration: none;
+    line-height: 40px;
+    padding: 0 24px ;
+    display: inline-block;
+}
+li:hover a{
+    color: #000;
+    background-color: #ccc;
+}
+.tentrang_header{
+    width: 100pw;
+    height: 35px;
+    font-size: 30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    border: solid grey;
+    background-color:#eee;
+}
+.formthem{
+    padding: 20px 0px;
+}
+.formthem .nhap{
+    width: 100%;
+    border: 1px #ccc solid;
+    padding:5px 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+.formthem .submit{
+    
+    border-radius: 5px;
+    padding: 5px 10px; 
+    background-color: white;
+    border: 1px grey solid;
+    
+}

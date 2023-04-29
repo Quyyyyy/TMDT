@@ -1,0 +1,120 @@
+html{
+    margin-top: -25px;
+}
+
+section{
+    max-width: 1205px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.phan1{
+    height: 50px;
+    background: red;
+    line-height: 40px;
+    padding-left: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 20px
+}
+.phan2{
+    display: flex;
+    margin-top: 50px;
+    min-height: 500px;
+    
+}
+
+.info{
+    margin-top: 50px;
+    min-width: 600px;
+    min-height: 400px;
+    justify-content: center;
+    font-size: 20px;
+    font-size: 17px;
+}
+
+.ggmap{
+    flex:1;
+    min-width: 30px;
+}
+
+.phan3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.lienhe{
+    flex:1;
+
+}
+
+.thongtinnhom{
+    flex:1;
+
+}
+.headerlienhe{
+    border-bottom:  solid #797777;
+    margin-right: 50px;
+    color: gray;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.headerthongtinnhom{
+    border-bottom:  solid #797777;
+    margin-right: 10px;
+    color: gray;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+/*th, td {  
+    min-width: 55px;
+    padding: 7px 8px;
+}*/
+.tablerow{
+    padding: 10px 17px;
+}
+
+/*.tb{
+    border-style: none;
+}*/
+
+tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+table{
+    text-indent: initial;
+    border-spacing: 2px;
+}
+.listSanPham{
+    border-collapse: collapse;
+    position: relative;
+}
+.listSanPham tr td:first-child{
+    text-align: center;
+}
+.listSanPham th{
+    border: 1px solid #ddd;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background:-webkit-linear-gradient(top, #202c4f, #5e698b);
+    color: #ddd;
+}
+.listSanPham td{
+    border: 1px solid #ddd;
+}
+.noPadding{
+    padding: 0 0 0 10px;
+    line-height: 2.5rem;
+}
+
+@media (max-width: 1000px){
+    .phan2{
+        flex-direction: column;
+    }
+    .phan3{
+        flex-direction: column;
+    }
+}

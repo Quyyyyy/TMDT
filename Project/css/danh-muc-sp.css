@@ -1,0 +1,36 @@
+/* Bộ lọc*/
+
+.filter{
+    display: flex;
+    justify-content: center;
+    margin-top: 21px;
+  }
+.filter div{
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+.filter button{
+    cursor: pointer;
+    background: #0683c3;
+    border: none;
+    padding: 7px 19px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+  }
+.search-filter{
+    text-align: center;
+    margin-top: 10px;
+  }
+.search-filter input{
+    padding: 8px 7px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-width: thin;
+  }
+
+.delete-filter-container a button:hover{
+    background: rgb(219, 10, 10);
+}
