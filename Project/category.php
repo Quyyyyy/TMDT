@@ -2,12 +2,12 @@
     session_start();
     require_once('utils/utility.php');
     require_once('database/dbhelper.php');
-    
+    $sqlcount = "select count(id) as number from product";
     $name = getGet('thuong-hieu');
     $gia = getGet('gia');
     $khuyenmai = getGet('khuyen-mai');
     $thutu = getGet('sap-xep');
-
+    
     $sql = "select product.*, category.name as category_name from product left join category on product.category_id = category.id";
 
     $x = false;
@@ -73,7 +73,16 @@
             $sql.= " order by discount DESC";
         }
     }
-
+    
+    $result = executeResult($sql);
+    $number = count($result);
+    $page = ceil($number/8);
+    $current_page = 1;
+    if(isset($_GET['page'])){
+        $current_page = $_GET['page'];
+    }
+    $index = ($current_page-1)*8;
+    $sql .= " limit $index,8";
     $data = executeResult($sql);
 ?>
 <!DOCTYPE html>
@@ -260,9 +269,9 @@
         </div>
 
         <div class="product-list container">
-                <div class="product">  
+                <div class="product" style="display: grid; grid-template-columns: auto auto auto auto;">  
                     <?php
-                        foreach($data as $item) {
+                            foreach($data as $item) {
                     ?>
                                 <div class="card" style="margin-bottom:20px">
                                     <div class="product-promo-container">
@@ -290,11 +299,19 @@
                                    </div>
                                 </div> 
                     <?php
-                            }                          
+                            }                         
                     ?>
                 </div>
             </div>
-        
+            <div >                                    
+                <?php
+                    for($i=1;$i<=$page;$i++){
+                ?>
+                    <a href="#" onclick="layUrl('page', '<?= $i?>')" ><?= $i?></a>
+                <?php
+                    }
+                ?>                                
+            </div>
 
         <div class="footer">
             <div class="plc">

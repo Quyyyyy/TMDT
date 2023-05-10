@@ -40,7 +40,7 @@
   <input class="form-control form-control-dark w-100" type="text" placeholder="Tìm kiếm" aria-label="Search">
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
-      <a class="nav-link" href="http://localhost/Project/logout.php">Thoát</a>
+      <a class="nav-link" href="http://localhost/Project/logout.php">Đăng xuất</a>
     </li>
   </ul>
 </nav>  
@@ -50,31 +50,31 @@
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" href="<?=$baseUrl?>">
+            <a class="nav-link <?php echo $home_active ?>" href="<?=$baseUrl?>">
               <i class="bi bi-house-fill"></i>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?=$baseUrl?>category">
+            <a class="nav-link <?php echo $category_active ?>" href="<?=$baseUrl?>category">
               <i class="bi bi-folder"></i>
               Danh Mục Sản Phẩm
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?=$baseUrl?>product">
+            <a class="nav-link <?php echo $product_active ?>" href="<?=$baseUrl?>product">
               <i class="bi bi-file-earmark-text"></i>
               Sản Phẩm
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?=$baseUrl?>order">
+            <a class="nav-link <?php echo $order_active ?>" href="<?=$baseUrl?>order">
               <i class="bi bi-minecart"></i>
               Quản Lý Đơn Hàng
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?=$baseUrl?>feedback">
+            <a class="nav-link <?php echo $feedback_active ?>" href="<?=$baseUrl?>feedback">
               <i class="bi bi-question-circle-fill"></i>
               Quản Lý Phản Hồi
             </a>

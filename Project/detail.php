@@ -8,7 +8,19 @@
     
     $sql = "select product.*, category.name as category_name from product left join category on product.category_id = category.id where product.id = $productId";
     $product = executeResult($sql,true);
-    $sqlre = "select * from review where id_product = $productId";
+    $sqlre = "select count(id) as number from review where id_product = $productId";
+    $result = executeResult($sqlre);
+    $number = 0;
+    if($result!=null && count($result)>0){
+        $number = $result[0]['number'];
+    }
+    $page = ceil($number/5);
+    $current_page = 1;
+    if(isset($_GET['page'])){
+        $current_page = $_GET['page'];
+    }
+    $index = ($current_page-1)*5;
+    $sqlre = "select * from review where id_product = $productId limit $index,5";
     $data = executeResult($sqlre);
 ?>
 <!DOCTYPE html>
@@ -339,21 +351,19 @@
                             </div>
                         </div>
                         <div class="pagecomment">
-                            <!-- <%
-                                int page1 = (int) request.getAttribute("page");
-                                int num = (int) request.getAttribute("num");
-                                for (int i = 1; i <= num; i++) {
-                                    if (i == page1) {
-                            %> phân trang -->
-                            <!-- <a href="" class="active"><%= i%></a> -->
-                            <!-- <%
+                            <?php
+                                for ($i = 1; $i <= $page; $i++) {
+                                    // if (i == page1) {
+                            ?>
+                            <!-- <a href="" class="active"><= i></a> -->
+                            <!-- <php
                             } else {
-                            %> -->
-                            <!-- <a href="chi_tiet_san_pham?id=<%= sp.getIdSanPham()%>&page=<%= i%>" class="active1"><%= i%></a>
-                            <% -->
-                                 <!--    }
+                            ?> -->
+                           <a href="detail.php?id=<?= $productId?>&page=<?= $i?>" class="active1"><?= $i?></a>
+                            <?php 
+                                    
                                 }
-                            %> -->
+                            ?> 
                         </div>
                         <?php
                             $user = getUserToken();
